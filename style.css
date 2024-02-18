@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #3d74e1, #87abd6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-app {
+  background-color: #ffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* width: 50%;
+  height: 50%; */
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo-title img {
+  width: 50px;
+  height: 50px;
+}
+.todo-inp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.todo-inp input {
+  flex: 1;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  background: rgb(233, 234, 234);
+  border-radius: 5px;
+}
+
+.todo-inp button {
+  padding: 0px 15px;
+
+  background: #3d74e1;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.todo-inp button:hover {
+  background: #77a6df;
+}
+ul {
+  margin-top: 20px;
+}
+ul li {
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+}
+#list-container{
+    cursor: pointer;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+ 
+}
+
+ul li.checked::before {
+  content: "";
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #3d74e1;
+    transition: all ease-in-out 0.3S;
+    color: #FFF;
+   
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  
+    .todo-app {
+        background-color: #ffff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: 80%;
+        height: 50%;
+      }   
+      
+      .todo-inp input {
+        width: 50%;
+        
+      }
+      
+    }
